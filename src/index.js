@@ -2,18 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import TodoComponent from './component/TodoComponent';
-import TC from './component/TodoComponent'
-import Todo2Comp from './component/Todo2Comp';
-
+// import CalculatorComponent from './component/CalculatorFunctions';
+// import TodoComponent from './component/TodoComponent';
+// import TC from './component/TodoComponent'
+// import Todo2Comp from './component/Todo2Comp';
+// import Calculator from './component/Calculator';
+// import CalculatorOutput from './component/CalculatorOutput';
+// import FunctionalComponent from './component/FunctionalComponent';
 import reportWebVitals from './reportWebVitals';
+
 
 ReactDOM.render(
   <React.StrictMode>
 
     <App />
-    <Todo2Comp />
-    <TodoComponent name="Richard" />
+    {/* <Calculator /> */}
+    {/* <CalculatorOutput /> */}
+    
 
   
   </React.StrictMode>,
