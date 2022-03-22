@@ -29,7 +29,10 @@ function ParentToChild({props}) {
     }
 
     return (
-        <div>
+       
+        <div> 
+            <h2>Parent/Child React Assignment March 21</h2>
+
             <label for="firstName">First Name: </label>
             <input onChange={firstNameChange} value={firstName}></input>
             <br />
