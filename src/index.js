@@ -16,9 +16,6 @@ ReactDOM.render(
   <React.StrictMode>
 
     <App />
-    {/* <Calculator /> */}
-    {/* <CalculatorOutput /> */}
-    
 
   
   </React.StrictMode>,

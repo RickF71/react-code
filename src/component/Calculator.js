@@ -1,32 +1,26 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 
-class Calculator extends Component {
-    // handleSubmit() {
 
-    // }
-    render() {
-        const calcStyle={       
-            backgroundColor: 'yellow', 
-            height:'20vh',
-            marginTop:'-70px',
-            fontSize:'50px',
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
-        };
+function Calculator () {
+    const [nbr1, setNbr1] = useState();
+    const [nbr2, setNbr2] = useState();
+    
+    
+
         return (
-            <div style={calcStyle}>
+            <div>
                 <h1>Calculator</h1>
-                <form id="calcNumbers" onSubmit={}>
+                {/* <form id="calcNumbers" onSubmit={}> */}
                     <label>
                         Nbr1:
-                        <input type="number" name="nbr1" />
+                        <input type="number" value={nbr1} />
                     </label>
                     <label>
                         Nbr2:
-                        <input type="number" name="nbr2" />
+                        <input type="number" value={nbr2} />
                     </label>
                     <div>
-                    <button onClick={() => this.calculate('nbrAdd')}>Add</button>
+                    <button onClick={() => calculate('nbrAdd',{nbr1},{nbr2})}>Add</button>
                     <button onClick={() => this.calculate('nbrSub')}>Subtract</button>
                     <button onClick={() => this.calculate('nbrMul')}>Multiply</button>
                     <button onClick={() => this.calculate('nbrDiv')}>Divide</button>
@@ -38,16 +32,13 @@ class Calculator extends Component {
                         <input id="subAdd" name="nbrSub" type="button" onClick={calculate('nbrSub', this)}>Subtract</input> */}
 
                     </div>
-                </form>
+                {/* </form> */}
             </div>
         ); 
 
-        function calculate(fn) {
-            console.log(fn)
+        function calculate(data) {
+            console.log(data)
         }
-    }
-
 
 }
-
 export default Calculator;
