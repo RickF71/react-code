@@ -47,7 +47,6 @@ function App() {
                   {/* <NavDropdown.Item><Link to="/dynamiccontent">Dynamic Content</Link></NavDropdown.Item> */}
                   <NavDropdown.Item><Link to="/nbrlist">Number List</Link></NavDropdown.Item>
                   <NavDropdown.Divider />
-                  
                   <NavDropdown.Item><Link to="/githubext">My Github React</Link></NavDropdown.Item>
              
                 </NavDropdown>
@@ -66,10 +65,11 @@ function App() {
             <Route path="/nbrlist" element={<NumberList />} />
             <Route path="/reactlayout" element={<ParentToChild />} />
             {/* <Route path="/dynamiccontent" element={<DynamicContent />} /> */}
-            
+ 
             <Route path="/githubext" element={() => { 
-              window.location.href = 'https://github.com/RickF71/react-code'; 
-              return null;
+              window.open("https://github.com/RickF71/react-code");
+              // window.location.href = 'https://github.com/RickF71/react-code'; 
+              // return null;
               }}/>
             <Route path="*" element={<RouteError />} />
           </Routes>
