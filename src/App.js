@@ -1,4 +1,7 @@
 import React, { Component, useState } from 'react';
+import { useBootstrapBreakpoints } from 'react-bootstrap/esm/ThemeProvider';
+import DynamicContent from './component/DynamicContent';
+import NumberList from './component/NumberList';
 // import day4 from './component/day4';
 // import styles from './howYaDoin.module.css';
 // import FirstComponent from './component/FirstComponent';
@@ -8,16 +11,79 @@ import ParentToChild from './component/ParentToChild';
 
 import TwoWayBind from './component/TwoWayBind';
 // import ChildComponent from './component/ChildComponent';
-// import Calculator from './component/Calculator';
-// import CauculatorOutput from './component/CalculatorOutput';
+import Calculator from './component/Calculator';
+import CauculatorOutput from './component/CalculatorOutput';
+import {BrowserRouter as Router, Link, Routes, Route} from 'react-router-dom';
+import Home from './component/Home';
+import About from './component/About';
+import Profile from './component/Profile';
+import RouteError from './RouteError';
+import Redirect from './Redirect';
+import Button from 'react-bootstrap/Button';
+import { Col, Row, Form, Navbar, 
+    Container, Nav, NavDropdown, NavDropdownProps } from "react-bootstrap";
+
 
 function App() {
 
     const[selectedMessage, setMessage] = useState('');
+    const[user, changeUser] = useState('userA');
+    
     return (
-      <div>
-        <ParentToChild />
-     
+      <div class="style01.css">
+        <Router>
+          <Container>
+            <Navbar className="navigation" fixed="top" expand="lg" >
+            <Navbar.Brand href="#home">Rick React</Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="me-auto">
+                <Nav.Link href="/">Home</Nav.Link>
+                <Nav.Link href="/about">About</Nav.Link>
+                
+                <NavDropdown title="Assignments" id="basic-nav-dropdown">
+                  <NavDropdown.Item><Link to="/calculator">Calculator</Link></NavDropdown.Item>
+                  <NavDropdown.Item><Link to="/reactlayout">React Layout</Link></NavDropdown.Item>
+                  {/* <NavDropdown.Item><Link to="/dynamiccontent">Dynamic Content</Link></NavDropdown.Item> */}
+                  <NavDropdown.Item><Link to="/nbrlist">Number List</Link></NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  
+                  <NavDropdown.Item><Link to="/githubext">My Github React</Link></NavDropdown.Item>
+             
+                </NavDropdown>
+              </Nav>
+              </Navbar.Collapse>
+       
+            </Navbar>
+            
+          </Container>
+          
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/calculator" element={<Calculator />} />
+            <Route path="/nbrlist" element={<NumberList />} />
+            <Route path="/reactlayout" element={<ParentToChild />} />
+            {/* <Route path="/dynamiccontent" element={<DynamicContent />} /> */}
+            
+            <Route path="/githubext" element={() => { 
+              window.location.href = 'https://github.com/RickF71/react-code'; 
+              return null;
+              }}/>
+            <Route path="*" element={<RouteError />} />
+          </Routes>
+          <Redirect />
+        </Router>
+        
+        {/* <NumberList numbers = {numbers} /> */}
+        {/* <DynamicContent user={user} />
+        <button onClick={() => changeUser( "userA")}>Switch to user A</button>
+        <button onClick={() => changeUser( "userB")}>Switch to user B</button> */}
+          
+          
+
+        
       </div>
       
     );

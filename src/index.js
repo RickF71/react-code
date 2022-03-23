@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import App from './App';
 // import CalculatorComponent from './component/CalculatorFunctions';
@@ -10,6 +11,7 @@ import App from './App';
 // import CalculatorOutput from './component/CalculatorOutput';
 // import FunctionalComponent from './component/FunctionalComponent';
 import reportWebVitals from './reportWebVitals';
+
 
 
 ReactDOM.render(
