@@ -6,7 +6,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(88, 126, 212);
+  background-color:#9A7878;
+
 }
 
 code {
@@ -17,10 +18,11 @@ code {
 .navbar {  
   /* position: sticky; */
   padding: 10px;
-  background-color: #3362CD;
-  color: white;
-
+  background-color: #9A9A78;
+ 
 
 }
 
-
+Container {
+  color: white;
+}

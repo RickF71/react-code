@@ -22,6 +22,8 @@ import Redirect from './Redirect';
 import Button from 'react-bootstrap/Button';
 import { Col, Row, Form, Navbar, 
     Container, Nav, NavDropdown, NavDropdownProps } from "react-bootstrap";
+import LoginForm from './component/LoginForm';
+import LoginValidate from './component/LoginValidate';
 
 
 function App() {
@@ -46,6 +48,7 @@ function App() {
                   <NavDropdown.Item><Link to="/reactlayout">React Layout</Link></NavDropdown.Item>
                   {/* <NavDropdown.Item><Link to="/dynamiccontent">Dynamic Content</Link></NavDropdown.Item> */}
                   <NavDropdown.Item><Link to="/nbrlist">Number List</Link></NavDropdown.Item>
+                  <NavDropdown.Item><Link to="/loginform">Login Form</Link></NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item><Link to="/githubext">My Github React</Link></NavDropdown.Item>
              
@@ -64,6 +67,8 @@ function App() {
             <Route path="/calculator" element={<Calculator />} />
             <Route path="/nbrlist" element={<NumberList />} />
             <Route path="/reactlayout" element={<ParentToChild />} />
+            <Route path="/loginform" element={<LoginForm />} />
+            <Route path="/loginValidate" element={<LoginValidate />} />
             {/* <Route path="/dynamiccontent" element={<DynamicContent />} /> */}
  
             <Route path="/githubext" element={() => { 
