@@ -14,6 +14,7 @@ import TwoWayBind from './component/TwoWayBind';
 import Calculator from './component/Calculator';
 import CauculatorOutput from './component/CalculatorOutput';
 import {BrowserRouter as Router, Link, Routes, Route} from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import Home from './component/Home';
 import About from './component/About';
 import Profile from './component/Profile';
@@ -32,7 +33,7 @@ function App() {
     const[user, changeUser] = useState('userA');
     
     return (
-      <div class="style01.css">
+      <div className="style01.css">
         <Router>
           <Container>
             <Navbar className="navigation" fixed="top" expand="lg" >

@@ -1,5 +1,7 @@
 import React, {Component, useState} from 'react';
 import ChildComponent from './ChildComponent';
+import { Col, Row, Form, Navbar, Container } from "react-bootstrap";
+
 
 function ParentToChild({props}) {
     const [firstName, setFirstName] = useState('');
@@ -31,87 +33,92 @@ function ParentToChild({props}) {
     return (
        
         <div> 
-            <h2>Parent/Child React Assignment March 21</h2>
+            <Row>
+                <Col>
+                    <h2>Parent/Child React Assignment March 21</h2>
 
-            <label for="firstName">First Name: </label>
-            <input onChange={firstNameChange} value={firstName}></input>
-            <br />
+                    <label for="firstName">First Name: </label>
+                    <input onChange={firstNameChange} value={firstName}></input>
+                    <br />
 
-            <label for="lastName">Last name: </label>
-            <input onChange={lastNameChange} value={lastName}></input>
-            <br />
+                    <label for="lastName">Last name: </label>
+                    <input onChange={lastNameChange} value={lastName}></input>
+                    <br />
 
-            <label for="age">Age: </label>
-            <input onChange={ageChange} value={age}></input>
-            <br />
+                    <label for="age">Age: </label>
+                    <input onChange={ageChange} value={age}></input>
+                    <br />
 
-            <label for="address">Address: </label>
-            <input onChange={addressChange} value={address}></input>
-            <br />
+                    <label for="address">Address: </label>
+                    <input onChange={addressChange} value={address}></input>
+                    <br />
 
-            <label for="hobbies">Hobbies: </label>
-            {/* <input onChange={hobbiesChange} value={hobbies}></input> */}
-            <br />
-            
-            <div className="hobby">
-                <input
-                type="checkbox"
-                id="fruit"
-                name="fruit"
-                value="Programming"
-                checked={isChecked}
-                onChange={handleOnChange}
-                />
-                Programming
-            </div>
+                    <label for="hobbies">Hobbies: </label>
+                    {/* <input onChange={hobbiesChange} value={hobbies}></input> */}
+                    <br />
+                    
+                    <div className="hobby">
+                        <input
+                        type="checkbox"
+                        id="fruit"
+                        name="fruit"
+                        value="Programming"
+                        checked={isChecked}
+                        onChange={handleOnChange}
+                        />
+                        Programming
+                    </div>
 
-            <div className="hobby">
-                <input
-                type="checkbox"
-                id="hobby2"
-                name="hobby2"
-                value="Watching Movies"
-                checked={isChecked2}
-                onChange={handleOnChange2}
-                />
-                Watching Movies
-            </div>
-        
-            <div className="hobby">
-                <input
-                type="checkbox"
-                id="hobby3"
-                name="hobby3"
-                value="Computer Games"
-                checked={isChecked3}
-                onChange={handleOnChange3}
-                />
-                Computer Games
-            </div>
-        
-            <div className="hobby">
-                <input
-                type="checkbox"
-                id="hobby4"
-                name="hobby4"
-                value="Bicycling"
-                checked={isChecked4}
-                onChange={handleOnChange4}
-                />
-                Bicycling
-            </div>
-        
-            <br />
+                    <div className="hobby">
+                        <input
+                        type="checkbox"
+                        id="hobby2"
+                        name="hobby2"
+                        value="Watching Movies"
+                        checked={isChecked2}
+                        onChange={handleOnChange2}
+                        />
+                        Watching Movies
+                    </div>
+                
+                    <div className="hobby">
+                        <input
+                        type="checkbox"
+                        id="hobby3"
+                        name="hobby3"
+                        value="Computer Games"
+                        checked={isChecked3}
+                        onChange={handleOnChange3}
+                        />
+                        Computer Games
+                    </div>
+                
+                    <div className="hobby">
+                        <input
+                        type="checkbox"
+                        id="hobby4"
+                        name="hobby4"
+                        value="Bicycling"
+                        checked={isChecked4}
+                        onChange={handleOnChange4}
+                        />
+                        Bicycling
+                    </div>
+                
+                    <br />
 
-            <button onClick={() => toChild()}>Submit</button> 
-
-            <ChildComponent 
-                firstName={firstName}
-                lastName={lastName}
-                age={age}
-                address={address}
-                hobbies={hobbies}
-            />
+                    <button onClick={() => toChild()}>Submit</button> 
+                </Col>
+                <Col className="rounded" >
+                    <ChildComponent 
+                        firstName={firstName}
+                        lastName={lastName}
+                        age={age}
+                        address={address}
+                        hobbies={hobbies}
+                    />
+                </Col>
+            </Row>
         </div>
     );
 }

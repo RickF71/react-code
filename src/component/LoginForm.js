@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {useNavigate, Route, Routes} from 'react-router-dom';
 import LoginValidate from './LoginValidate';
+import { Col, Row, Form, Navbar, Container, Nav, NavDropdown, NavDropdownProps } from "react-bootstrap";
 
 function LoginForm(props) {
     let navigate = useNavigate();
@@ -26,21 +27,28 @@ function LoginForm(props) {
     return (
         <div>
             <div>
-                <h3>Sign In Here</h3>
-                <label for="userName">User Name: </label>
-                {/* <input onChange={userNameChange} value={userName}></input> */}
-                <input value={userName}></input>
-                <br />
+                <h3 className="text-center">Sign In Here</h3>
+                <Container>
+                    <Row>
+                        <Col><label for="userName">User Name: </label></Col>
+                        <Col>
+                            {/* <input onChange={userNameChange} value={userName}></input> */}
+                            <input value={userName}></input>
+                        </Col>
+                    </Row>
 
-                <label for="password">Password: </label>
-                <input onChange={passwordChange} value={password}></input>
-                <br />
+                    <Row>
+                        <Col><label for="userPassword">Password: </label></Col>
+                        <Col><input value={password}></input></Col>
+                    </Row>
 
-                <label for="email">Email: </label>
-                <input onChange={emailChange} value={email}></input>
-                <br />
-
-                <button onClick={() => toLoginValidate()}>Submit</button> 
+                    <Row>
+                        <Col><label for="email">Email: </label></Col>
+                        <Col><input value={email}></input></Col>
+                    </Row>
+             
+                    <center><button onClick={() => toLoginValidate()} >Submit</button> </center>
+                </Container>
             </div>
         </div>
     );
