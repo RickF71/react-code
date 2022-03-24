@@ -11,16 +11,19 @@ import ParentToChild from './component/ParentToChild';
 
 import TwoWayBind from './component/TwoWayBind';
 // import ChildComponent from './component/ChildComponent';
-import Calculator from './component/Calculator';
+
 import CauculatorOutput from './component/CalculatorOutput';
-import {BrowserRouter as Router, Link, Routes, Route} from 'react-router-dom';
-import { HashRouter } from 'react-router-dom';
+// import {BrowserRouter as Router, Link, Routes, Route} from 'react-router-dom';
+import {HashRouter as Router, Link, Routes, Route} from 'react-router-dom';
+// import { HashRouter } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
 import Home from './component/Home';
+import Calculator from './component/Calculator';
 import About from './component/About';
 import Profile from './component/Profile';
 import RouteError from './RouteError';
 import Redirect from './Redirect';
-import Button from 'react-bootstrap/Button';
+
 import { Col, Row, Form, Navbar, 
     Container, Nav, NavDropdown, NavDropdownProps } from "react-bootstrap";
 import LoginForm from './component/LoginForm';
@@ -38,13 +41,7 @@ function App() {
           <Container>
             <Navbar className="navigation" fixed="top" expand="lg" >
             <Navbar.Brand href="#home">Rick React</Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="me-auto">
-                <Nav.Link href="/">Home</Nav.Link>
-                <Nav.Link href="/about">About</Nav.Link>
-                
-                <NavDropdown title="Assignments" id="basic-nav-dropdown">
+             <NavDropdown title="Assignments" id="basic-nav-dropdown">
                   <NavDropdown.Item><Link to="/calculator">Calculator</Link></NavDropdown.Item>
                   <NavDropdown.Item><Link to="/reactlayout">React Layout</Link></NavDropdown.Item>
                   {/* <NavDropdown.Item><Link to="/dynamiccontent">Dynamic Content</Link></NavDropdown.Item> */}
@@ -54,6 +51,14 @@ function App() {
                   <NavDropdown.Item><Link to="/githubext">My Github React</Link></NavDropdown.Item>
              
                 </NavDropdown>
+                <Nav.Link href="/">Home</Nav.Link>
+                <Nav.Link href="/about">About</Nav.Link>
+              <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="navbar-nav">
+              <Nav className="me-auto">
+            
+                
+               
               </Nav>
               </Navbar.Collapse>
        
