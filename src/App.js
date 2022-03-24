@@ -36,7 +36,6 @@ function App() {
     const[user, changeUser] = useState('userA');
     
     return (
-      <div className="style01.css">
         <Router>
           <Container>
             <Navbar className="navigation" fixed="top" expand="lg" >
