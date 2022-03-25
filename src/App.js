@@ -13,8 +13,8 @@ import TwoWayBind from './component/TwoWayBind';
 // import ChildComponent from './component/ChildComponent';
 
 import CauculatorOutput from './component/CalculatorOutput';
-// import {BrowserRouter as Router, Link, Routes, Route} from 'react-router-dom';
-import {HashRouter as Router, Link, Routes, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Link, Routes, Route} from 'react-router-dom';
+// import {HashRouter as Router, Link, Routes, Route} from 'react-router-dom';
 // import { HashRouter } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Home from './component/Home';
@@ -36,30 +36,30 @@ function App() {
     const[user, changeUser] = useState('userA');
     
     return (
+      <div>
         <Router>
           <Container>
             <Navbar className="navigation" fixed="top" expand="lg" >
-            <Navbar.Brand href="#home">Rick React</Navbar.Brand>
-             <NavDropdown title="Assignments" id="basic-nav-dropdown">
-                  <NavDropdown.Item><Link to="/calculator">Calculator</Link></NavDropdown.Item>
-                  <NavDropdown.Item><Link to="/reactlayout">React Layout</Link></NavDropdown.Item>
-                  {/* <NavDropdown.Item><Link to="/dynamiccontent">Dynamic Content</Link></NavDropdown.Item> */}
-                  <NavDropdown.Item><Link to="/nbrlist">Number List</Link></NavDropdown.Item>
-                  <NavDropdown.Item><Link to="/loginform">Login Form</Link></NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item><Link to="/githubext">My Github React</Link></NavDropdown.Item>
-             
-                </NavDropdown>
-                <Nav.Link href="/">Home</Nav.Link>
-                <Nav.Link href="/about">About</Nav.Link>
-              <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Brand href="/">Rick React</Navbar.Brand>
+            <NavDropdown title="Assignments" id="basic-nav-dropdown">
+              <NavDropdown.Item><Link to="/calculator">Calculator</Link></NavDropdown.Item>
+              <NavDropdown.Item><Link to="/reactlayout">React Layout</Link></NavDropdown.Item>
+              {/* <NavDropdown.Item><Link to="/dynamiccontent">Dynamic Content</Link></NavDropdown.Item> */}
+              <NavDropdown.Item><Link to="/nbrlist">Number List</Link></NavDropdown.Item>
+              <NavDropdown.Item><Link to="/loginform">Login Form</Link></NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item><Link to="/githubext">My Github React</Link></NavDropdown.Item>
+          
+            </NavDropdown>
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/about">About</Nav.Link>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="navbar-nav">
               <Nav className="me-auto">
             
                 
-               
               </Nav>
-              </Navbar.Collapse>
+            </Navbar.Collapse>
        
             </Navbar>
             
@@ -85,18 +85,13 @@ function App() {
           </Routes>
           <Redirect />
         </Router>
-        
-        {/* <NumberList numbers = {numbers} /> */}
-        {/* <DynamicContent user={user} />
-        <button onClick={() => changeUser( "userA")}>Switch to user A</button>
-        <button onClick={() => changeUser( "userB")}>Switch to user B</button> */}
-          
+    
           
 
         
       </div>
-      
-    );
+     )
+    
 }
 
 export default App;
