@@ -39,7 +39,23 @@
   }
 }
 
-
 button {
   margin: 5px;
+}
+
+a {
+  color:#29290B;
+}
+
+.dropdown-menu {
+  background-color: #789a7b;
+}
+
+
+.dropdown-menu {
+  background-color: #789a7b;
+}
+
+.nav-link {
+  color: #29290B;
 }

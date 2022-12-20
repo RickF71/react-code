@@ -12,7 +12,7 @@ import ParentToChild from './component/ParentToChild';
 import TwoWayBind from './component/TwoWayBind';
 // import ChildComponent from './component/ChildComponent';
 
-import CauculatorOutput from './component/CalculatorOutput';
+import CalculatorOutput from './component/CalculatorOutput';
 import {BrowserRouter as Router, Link, Routes, Route} from 'react-router-dom';
 // import {HashRouter as Router, Link, Routes, Route} from 'react-router-dom';
 // import { HashRouter } from 'react-router-dom';
@@ -28,6 +28,7 @@ import { Col, Row, Form, Navbar,
     Container, Nav, NavDropdown, NavDropdownProps } from "react-bootstrap";
 import LoginForm from './component/LoginForm';
 import LoginValidate from './component/LoginValidate';
+import './App.css';
 
 
 function App() {
@@ -40,27 +41,20 @@ function App() {
         <Router>
           <Container>
             <Navbar className="navigation" fixed="top" expand="lg" >
-            <Navbar.Brand href="/">Rick React</Navbar.Brand>
-            <NavDropdown title="Assignments" id="basic-nav-dropdown">
-              <NavDropdown.Item><Link to="/calculator">Calculator</Link></NavDropdown.Item>
-              <NavDropdown.Item><Link to="/reactlayout">React Layout</Link></NavDropdown.Item>
-              {/* <NavDropdown.Item><Link to="/dynamiccontent">Dynamic Content</Link></NavDropdown.Item> */}
-              <NavDropdown.Item><Link to="/nbrlist">Number List</Link></NavDropdown.Item>
-              <NavDropdown.Item><Link to="/loginform">Login Form</Link></NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item><Link to="/githubext">My Github React</Link></NavDropdown.Item>
-          
-            </NavDropdown>
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/about">About</Nav.Link>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="navbar-nav">
-              <Nav className="me-auto">
+              <Navbar.Brand href="/">Rick React</Navbar.Brand>
+              <NavDropdown title="Assignments" id="basic-nav-dropdown">
+                <NavDropdown.Item><Link to="/calculator">Calculator</Link></NavDropdown.Item>
+                <NavDropdown.Item><Link to="/reactlayout">React Layout</Link></NavDropdown.Item>
+                {/* <NavDropdown.Item><Link to="/dynamiccontent">Dynamic Content</Link></NavDropdown.Item> */}
+                <NavDropdown.Item><Link to="/nbrlist">Number List</Link></NavDropdown.Item>
+                <NavDropdown.Item><Link to="/loginform">Login Form</Link></NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item><Link to="/githubext">My Github React</Link></NavDropdown.Item>
             
-                
-              </Nav>
-            </Navbar.Collapse>
-       
+              </NavDropdown>
+              <Nav.Link href="/">Home</Nav.Link>
+              <Nav.Link href="/about">About</Nav.Link>
+        
             </Navbar>
             
           </Container>
