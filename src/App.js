@@ -61,13 +61,13 @@ function App() {
           
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="./about" element={<About />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/calculator" element={<Calculator />} />
-            <Route path="/nbrlist" element={<NumberList />} />
-            <Route path="/reactlayout" element={<ParentToChild />} />
-            <Route path="/loginform" element={<LoginForm />} />
-            <Route path="/loginValidate" element={<LoginValidate />} />
+            <Route path="about" element={<About />} />
+            <Route path="profile" element={<Profile />} />
+            <Route path="calculator" element={<Calculator />} />
+            <Route path="nbrlist" element={<NumberList />} />
+            <Route path="reactlayout" element={<ParentToChild />} />
+            <Route path="loginform" element={<LoginForm />} />
+            <Route path="loginValidate" element={<LoginValidate />} />
             {/* <Route path="/dynamiccontent" element={<DynamicContent />} /> */}
  
             <Route path="/githubext" element={() => { 
