@@ -63,7 +63,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="about" element={<About />} />
             <Route path="profile" element={<Profile />} />
-            <Route path="calculator" element={<Calculator />} />
+            <Route path="/calculator" element={<Calculator />} />
             <Route path="nbrlist" element={<NumberList />} />
             <Route path="reactlayout" element={<ParentToChild />} />
             <Route path="loginform" element={<LoginForm />} />

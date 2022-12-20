@@ -1,9 +1,17 @@
 import React from 'react';
+//import { Route, RouteError } from 'react-router-dom';
 
 function RouteError(props) {
     return (
         <div>
-            <h1>Routing Doesn't See This Location</h1>
+            {(error, errorInfo) => (
+            <div>
+              <h1>An error occurred</h1>
+              <p>{error.message}</p>
+              <pre>{errorInfo.componentStack}</pre>
+            </div>
+          )}
+           {/* <Route path="/some-route" component={SomeComponent} /> */}
         </div>
     );
 }
