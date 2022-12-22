@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import App from './App';
@@ -15,11 +16,18 @@ import reportWebVitals from './reportWebVitals';
 
 
 ReactDOM.render(
-  <React.StrictMode>
-
-    <App />
   
+
+  <React.StrictMode>
+    <App />
   </React.StrictMode>,
+
+    // <BrowserRouter basename="/react-code">
+    //    <App />
+    //  </BrowserRouter> ,
+
+
+
   document.getElementById('root')
 );
 
@@ -27,3 +35,5 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+
